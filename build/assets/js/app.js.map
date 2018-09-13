@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [
+    "node_modules/browser-pack/_prelude.js",
+    "source/js/app.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;;;ACAA,IAAI,UAAU,YAAd;;AAEE,KAAK,gBAAL,CAAsB,OAAtB,EAA+B,YAAW;AACzC,SAAQ,IAAR,GAAe,KAAK,SAAL,CAAe;AAC7B,UAAQ,OAAO,KADc;AAE7B,QAAM,KAAK,KAFkB;AAG7B,SAAO,MAAM;AAHgB,EAAf,CAAf;AAKA,CAND;;AAQA,KAAK,gBAAL,CAAsB,OAAtB,EAA+B,YAAW;AACzC,KAAI,OAAO,KAAK,KAAL,CAAW,QAAQ,IAAR,IAAgB,IAA3B,CAAX;AACA,QAAO,KAAP,GAAe,KAAK,MAAL,IAAe,EAA9B;AACA,MAAK,KAAL,GAAa,KAAK,IAAL,IAAa,EAA1B;AACA,OAAM,KAAN,GAAc,KAAK,KAAL,IAAc,EAA5B;AACA,CALD;;AAOA,iBAAiB,gBAAjB,CAAkC,QAAlC,EAA4C,YAAW;AACtD,WAAU,iBAAiB,OAAjB,GAA2B,cAA3B,GAA4C,YAAtD;AACA,CAFD",
+  "file": "generated.js",
+  "sourceRoot": "",
+  "sourcesContent": [
+    "(function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module '\"+o+\"'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()",
+    "let storage = localStorage;\n\n\t\tseve.addEventListener('click', function() {\n\t\t\tstorage.data = JSON.stringify({\n\t\t\t\tmyName: myName.value,\n\t\t\t\tbday: bday.value,\n\t\t\t\tabout: about.value\n\t\t\t});\n\t\t});\n\n\t\tload.addEventListener('click', function() {\n\t\t\tlet data = JSON.parse(storage.data || '{}');\n\t\t\tmyName.value = data.myName || '';\n\t\t\tbday.value = data.bday || '';\n\t\t\tabout.value = data.about || '';\n\t\t});\n\n\t\tissessionStorage.addEventListener('change', function() {\n\t\t\tstorage = issessionStorage.chacked ? sessionStorage : localStorage;\n\t\t});"
+  ]
+}
