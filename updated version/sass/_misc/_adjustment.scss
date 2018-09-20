@@ -1,0 +1,118 @@
+html {
+    width: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font: 36px/1.6 'Roboto', Arial Helvetica, 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  color: #333;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 2%;
+}
+
+.is-landing {
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none outside none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+button:disabled {
+	cursor: default;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+textarea:focus,
+input:focus,
+a:focus {
+	outline: none;
+}
+
+:focus {
+	outline: 3px solid #c1e0fe;
+	outline: 3px solid rgba(131, 192, 253, 0.5);
+	outline-offset: 1px
+}
+
+::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: 0;
+}
+
+input,
+a {
+	border: none;
+}
+a, button {
+	-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	&:focus, &:active {
+		outline: none;
+	}
+}
+
+a:link,
+a:visited {
+	text-decoration: none
+}

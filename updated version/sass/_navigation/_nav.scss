@@ -1,0 +1,47 @@
+.navigation, .navigation-list {
+    width: 100%;
+    margin-right: 52px;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.navigation-item {
+    margin-right: auto;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.navigation-link {
+   font-size: 18px;
+   line-height: 1.6;
+   font-weight: 400;
+   color: #fff;
+   position: relative;
+		padding: 10px 0;
+
+   &:hover {
+       &:before {
+           width: 100%;
+       }
+   }
+}
+
+.underline {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    transition: transform 0.5s cubic-bezier(0.33, 1.61, 0, 0.83);
+}
+
+.animation-outline {
+	background-color: #E4D442;
+}

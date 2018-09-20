@@ -1,0 +1,156 @@
+.section-app {
+	padding: 110px 0 82px 0;
+}
+
+.performance-left {
+	width: 50%;
+	padding-right: 15px;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 500px;
+		height: 465px;
+		background-color: #fff;
+		border: 1px solid #dedfde;
+		position: absolute;
+		top: 50%;
+		left: 39px;
+		border-radius: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.performance-img {
+	margin-left: -40px;
+	position: relative;
+	z-index: 10;
+}
+
+.performance-option {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	height: 465px;
+	width: 235px;
+	text-align: right;
+	z-index: 25;
+}
+
+.features-group {
+	height: 100%;
+}
+
+.pos-notif, .pos-cld, .pos-stc, .pos-like, .pos-list {
+	position: absolute;
+    top: -10px;
+    left: 45px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.pos-cld {
+	top: 66px;
+    left: inherit;
+    right: 27px;
+}
+
+
+.pos-stc {
+	top: 50%;
+	left: inherit;
+    right: -13px;
+	transform: translateY(-50%);
+}
+
+.pos-like {
+	left: inherit;
+    top: inherit;
+    bottom: 69px;
+    right: 27px;
+}
+
+.pos-list {
+	right: inherit;
+    top: inherit;
+    left: 44px;
+    bottom: -8px;
+}
+
+.radio-label {
+	display: flex;
+}
+
+.performance-right {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-left: 15px;
+}
+
+.section-title {
+	font: 48px/1.6 'Roboto', Arial Helvetica, 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	color: #5a5a5a;
+}
+
+.section-subtitle {
+	display: inline-block;
+	font: 18px/1.6 'Roboto', Arial Helvetica, 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	color: #5a5a5a;
+	width: calc(100% - 90px);
+}
+
+.color-green {
+	color: #2ecc71;
+}
+
+.radio-btn {
+	display: block;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.radio-btn-icon {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #e7e7e7;
+		border-radius: 50%;
+	}
+}
+
+$list: notif, cld, stc, like, list;
+
+@each $icon in $list {
+	.pic-#{$icon} {
+		background-image: url('../svg/#{ $icon }.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+.radio-btn:checked + .radio-btn-icon:before {
+	background-color: #2ecc71;
+	box-shadow: 0 0 0 4px #fff, 0 0 12px rgba(#000,0.6);
+	transform: scale(1.2);
+	transform-origin: center;
+}
